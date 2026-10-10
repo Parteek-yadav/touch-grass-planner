@@ -77,7 +77,7 @@ def main():
     args = parser.parse_args()
     if args.command == 'train':
         model = train(read_data(args.data))
-        (ROOT / 'model.json').write_text(json.dumps(model, indent=2) + '\n', encoding='utf-8')
+        (ROOT / 'model.json').write_text(json.dumps(model, indent=2) + '\n', encoding='utf-8', newline='\n')
         print('Trained local synthetic model on', model['rows'], 'rows; labels:', ', '.join(sorted(model['classes'])))
     else:
         print(json.dumps(recommend(load_model(), {f: getattr(args, f) for f in FEATURES}, args.unsafe, args.stationary_only), indent=2))
