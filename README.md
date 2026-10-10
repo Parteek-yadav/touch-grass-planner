@@ -1,6 +1,12 @@
 # Touch Grass Planner
 
-A tiny, genuinely trainable local AI that recommends a gentle outdoor pause, nature noticing, accessible wander, or park loop. Built October 10, 2026 as a Hacktoberfest Week 1 Touch Grass challenge prototype. Free, offline, Python standard library only, MIT licensed. No account, API key, paid inference, model download, telemetry or external assets.
+[![Verification](https://github.com/Parteek-yadav/touch-grass-planner/actions/workflows/verify.yml/badge.svg)](https://github.com/Parteek-yadav/touch-grass-planner/actions/workflows/verify.yml)
+
+Live browser demo: **https://parteek-yadav.github.io/touch-grass-planner/**
+
+The hosted version computes entirely in your browser after its static assets load. No account or Python installation is needed to use it; no prediction API, analytics or third-party scripts. Initial page/asset loads still require an internet connection; fresh offline loads are not promised.
+
+A tiny, genuinely trainable local AI that recommends a gentle outdoor pause, nature noticing, accessible wander, or park loop. Built October 10, 2026 as a Hacktoberfest Week 1 Touch Grass challenge prototype. Free, offline, Python standard library only, MIT licensed. No account, API key, paid inference, external model download or telemetry. The browser downloads only this site's own static assets.
 
 ## Quick start
 
@@ -10,6 +16,7 @@ Install/use Python 3.10 or newer. Open a terminal in this folder. Windows exampl
 python planner.py train
 python -m unittest -v
 python verify.py
+python build_site.py
 python planner.py predict --time 15 --energy medium --setting street
 python planner.py predict --time 30 --energy high --setting park
 python planner.py predict --time 30 --energy high --setting park --stationary-only
@@ -49,4 +56,12 @@ Run `python evaluate.py` to reproduce the context-disjoint synthetic baseline di
 
 The single-result browser UI hides inputs once a plan is shown and encourages closing the tab. Optional explanation shows synthetic feature counts, an uncalibrated score and ranking margin. Printable offline prompts: docs/OFFLINE-CARDS.md.
 
-.github/workflows/verify.yml prepares free public-repository GitHub Actions training, tests, synthetic evaluation, reproducibility check and evidence upload. A real GitHub run succeeded: https://github.com/Parteek-yadav/touch-grass-planner/actions/runs/38038041451 . Training, 15 unit tests, five CLI scenarios, five loopback HTTP checks, synthetic evaluation, exact model reproducibility and evidence artifact upload passed on Ubuntu. Public app deployment or real demo video remains pending; the source repository is not itself a deployed app.
+.github/workflows/verify.yml prepares free public-repository GitHub Actions training, tests, synthetic evaluation, reproducibility check and evidence upload. A real GitHub run succeeded: https://github.com/Parteek-yadav/touch-grass-planner/actions/runs/38038041451 . Training, 15 unit tests, five CLI scenarios, five loopback HTTP checks, synthetic evaluation, exact model reproducibility and evidence artifact upload passed on Ubuntu. The browser adaptation is deployed separately to the live demo link above.
+
+## Browser equivalence and testing
+
+Python remains stdlib-only. To run the full verification suite (which now includes real browser-model parity), also have Node.js 18+ on PATH. No npm dependencies are used. `python build_site.py` bundles the actual saved Python parameters and activity definitions into `site/model-data.mjs`; the browser implementation is `site/planner.mjs`. `python -m unittest test_browser_parity -v` executes JavaScript under Node, comparing all fields and raw scores across 27 input contexts × unsafe/stationary modifiers: 108 valid cases plus four invalid inputs, numeric tolerance 1e-12. This proves implemented behavior matches the Python model; it does not validate synthetic recommendations in the real world.
+
+The web app provides the same hard safety/stationary/time/park constraints, explicit model limitations and one-plan exit. The root index.html remains the optional Python-server UI; site/index.html is the functional static app. No service worker or claim of offline first-load support.
+
+The Pages workflow runs the complete suite and checks exact model/bundle reproducibility before uploading only site/. Repository contents permission defaults to read; only the deployment job has pages:write and id-token:write. No credentials are embedded in site assets.
