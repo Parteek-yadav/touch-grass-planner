@@ -1,0 +1,204 @@
+[
+  {
+    "scenario": "A five-minute low-energy pause",
+    "command": "python planner.py predict --time 5 --energy low --setting doorstep",
+    "result": {
+      "status": "plan",
+      "activity": "pause",
+      "title": "Outdoor sensory pause",
+      "minutes": 5,
+      "instruction": "If safe, pause at an accessible outdoor spot. Notice three colors and two sounds. Sitting is fine.",
+      "model_used": true,
+      "model_score": 0.5322,
+      "eligible_margin": 0.0686,
+      "ranking_note": "Close call: eligible choices scored similarly.",
+      "evidence": [
+        {
+          "feature": "time",
+          "value": "5",
+          "synthetic_matches_for_label": 12,
+          "label_rows": 28
+        },
+        {
+          "feature": "energy",
+          "value": "low",
+          "synthetic_matches_for_label": 15,
+          "label_rows": 28
+        },
+        {
+          "feature": "setting",
+          "value": "doorstep",
+          "synthetic_matches_for_label": 12,
+          "label_rows": 28
+        }
+      ],
+      "uncertainty": "This synthetic-model score is not a calibrated probability of usefulness or safety.",
+      "reason": "The learned model ranked this highest among eligible plans using time=5, energy=low, setting=doorstep.",
+      "constraints": "Time and park requirements are hard filters. Safety is self-reported; there is no live weather or route check.",
+      "alternatives": [
+        {
+          "activity": "observe",
+          "model_score": 0.4636
+        }
+      ],
+      "reminder": "Check weather, air quality, daylight and local access yourself. Avoid traffic, heat, storms and unsafe areas. No exercise or medical benefit is promised."
+    }
+  },
+  {
+    "scenario": "Fifteen minutes on a familiar street",
+    "command": "python planner.py predict --time 15 --energy medium --setting street",
+    "result": {
+      "status": "plan",
+      "activity": "wander",
+      "title": "Gentle accessible wander",
+      "minutes": 15,
+      "instruction": "Choose a familiar, accessible route close to home. Walk or roll at your own pace; turn back early if needed.",
+      "model_used": true,
+      "model_score": 0.6201,
+      "eligible_margin": 0.3701,
+      "ranking_note": "A preference ranking, not a safety or usefulness guarantee.",
+      "evidence": [
+        {
+          "feature": "time",
+          "value": "15",
+          "synthetic_matches_for_label": 10,
+          "label_rows": 18
+        },
+        {
+          "feature": "energy",
+          "value": "medium",
+          "synthetic_matches_for_label": 7,
+          "label_rows": 18
+        },
+        {
+          "feature": "setting",
+          "value": "street",
+          "synthetic_matches_for_label": 12,
+          "label_rows": 18
+        }
+      ],
+      "uncertainty": "This synthetic-model score is not a calibrated probability of usefulness or safety.",
+      "reason": "The learned model ranked this highest among eligible plans using time=15, energy=medium, setting=street.",
+      "constraints": "Time and park requirements are hard filters. Safety is self-reported; there is no live weather or route check.",
+      "alternatives": [
+        {
+          "activity": "pause",
+          "model_score": 0.25
+        },
+        {
+          "activity": "observe",
+          "model_score": 0.1183
+        }
+      ],
+      "reminder": "Check weather, air quality, daylight and local access yourself. Avoid traffic, heat, storms and unsafe areas. No exercise or medical benefit is promised."
+    }
+  },
+  {
+    "scenario": "Thirty minutes in a park",
+    "command": "python planner.py predict --time 30 --energy high --setting park",
+    "result": {
+      "status": "plan",
+      "activity": "wander",
+      "title": "Gentle accessible wander",
+      "minutes": 15,
+      "instruction": "Choose a familiar, accessible route close to home. Walk or roll at your own pace; turn back early if needed.",
+      "model_used": true,
+      "model_score": 0.3477,
+      "eligible_margin": 0.0536,
+      "ranking_note": "Close call: eligible choices scored similarly.",
+      "evidence": [
+        {
+          "feature": "time",
+          "value": "30",
+          "synthetic_matches_for_label": 8,
+          "label_rows": 18
+        },
+        {
+          "feature": "energy",
+          "value": "high",
+          "synthetic_matches_for_label": 9,
+          "label_rows": 18
+        },
+        {
+          "feature": "setting",
+          "value": "park",
+          "synthetic_matches_for_label": 6,
+          "label_rows": 18
+        }
+      ],
+      "uncertainty": "This synthetic-model score is not a calibrated probability of usefulness or safety.",
+      "reason": "The learned model ranked this highest among eligible plans using time=30, energy=high, setting=park.",
+      "constraints": "Time and park requirements are hard filters. Safety is self-reported; there is no live weather or route check.",
+      "alternatives": [
+        {
+          "activity": "explore",
+          "model_score": 0.2941
+        },
+        {
+          "activity": "observe",
+          "model_score": 0.2733
+        },
+        {
+          "activity": "pause",
+          "model_score": 0.0848
+        }
+      ],
+      "reminder": "Check weather, air quality, daylight and local access yourself. Avoid traffic, heat, storms and unsafe areas. No exercise or medical benefit is promised."
+    }
+  },
+  {
+    "scenario": "Stationary-only park break",
+    "command": "python planner.py predict --time 30 --energy high --setting park --stationary-only",
+    "result": {
+      "status": "plan",
+      "activity": "observe",
+      "title": "Nature noticing",
+      "minutes": 5,
+      "instruction": "From an accessible outdoor spot, observe a plant, cloud, or bird without approaching wildlife. No plant or animal identification is required.",
+      "model_used": true,
+      "model_score": 0.2733,
+      "eligible_margin": 0.1885,
+      "ranking_note": "A preference ranking, not a safety or usefulness guarantee.",
+      "evidence": [
+        {
+          "feature": "time",
+          "value": "30",
+          "synthetic_matches_for_label": 7,
+          "label_rows": 31
+        },
+        {
+          "feature": "energy",
+          "value": "high",
+          "synthetic_matches_for_label": 11,
+          "label_rows": 31
+        },
+        {
+          "feature": "setting",
+          "value": "park",
+          "synthetic_matches_for_label": 12,
+          "label_rows": 31
+        }
+      ],
+      "uncertainty": "This synthetic-model score is not a calibrated probability of usefulness or safety.",
+      "reason": "The learned model ranked this highest among eligible plans using time=30, energy=high, setting=park.",
+      "constraints": "Time and park requirements are hard filters. Safety is self-reported; there is no live weather or route check.",
+      "alternatives": [
+        {
+          "activity": "pause",
+          "model_score": 0.0848
+        }
+      ],
+      "reminder": "Check weather, air quality, daylight and local access yourself. Avoid traffic, heat, storms and unsafe areas. No exercise or medical benefit is promised."
+    }
+  },
+  {
+    "scenario": "Unsafe conditions",
+    "command": "python planner.py predict --time 30 --energy high --setting park --unsafe",
+    "result": {
+      "status": "stay_inside",
+      "title": "Skip the outdoor plan today",
+      "reason": "You marked conditions unsafe. This overrides the AI; stay inside and reassess later.",
+      "model_used": false
+    }
+  }
+]
