@@ -1,0 +1,24 @@
+Python: 3.12.7 (main, Oct 16 2024, 00:21:24) [MSC v.1929 64 bit (AMD64)]
+Trained local synthetic model on 81 rows; labels: explore, observe, pause, wander
+test_close_call_disclosed (test_planner.ExplanationTests.test_close_call_disclosed) ... ok
+test_context_holdout (test_planner.ExplanationTests.test_context_holdout) ... ok
+test_evidence_matches_saved_counts (test_planner.ExplanationTests.test_evidence_matches_saved_counts) ... ok
+test_all_contexts_time_limit (test_planner.PlannerTests.test_all_contexts_time_limit) ... ok
+test_dataset_size (test_planner.PlannerTests.test_dataset_size) ... ok
+test_deterministic (test_planner.PlannerTests.test_deterministic) ... ok
+test_invalid_input (test_planner.PlannerTests.test_invalid_input) ... ok
+test_labels (test_planner.PlannerTests.test_labels) ... ok
+test_normalization (test_planner.PlannerTests.test_normalization) ... ok
+test_park_filter (test_planner.PlannerTests.test_park_filter) ... ok
+test_retraining_changes_actual_recommendation (test_planner.PlannerTests.test_retraining_changes_actual_recommendation) ... ok
+test_scores_respond_to_energy (test_planner.PlannerTests.test_scores_respond_to_energy) ... ok
+test_stationary_only (test_planner.PlannerTests.test_stationary_only) ... ok
+test_uncertainty_disclosed (test_planner.PlannerTests.test_uncertainty_disclosed) ... ok
+test_unsafe_override (test_planner.PlannerTests.test_unsafe_override) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.010s
+
+OK
+
+Exit code: 0
