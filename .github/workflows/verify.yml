@@ -27,6 +27,7 @@ jobs:
           name: touch-grass-evidence
           path: |
             docs/test-output.txt
+            docs/browser-parity.json
             docs/http-checks.json
             docs/sample-predictions.json
             docs/synthetic-evaluation.json
