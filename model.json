@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "provenance": "Hand-authored synthetic preferences, not human observations",
+  "rows": 81,
+  "classes": {
+    "pause": 28,
+    "observe": 31,
+    "wander": 18,
+    "explore": 4
+  },
+  "counts": {
+    "pause": {
+      "time": {
+        "5": 12,
+        "15": 8,
+        "30": 8
+      },
+      "energy": {
+        "low": 15,
+        "medium": 8,
+        "high": 5
+      },
+      "setting": {
+        "doorstep": 12,
+        "street": 11,
+        "park": 5
+      }
+    },
+    "observe": {
+      "time": {
+        "5": 15,
+        "15": 9,
+        "30": 7
+      },
+      "energy": {
+        "low": 10,
+        "medium": 10,
+        "high": 11
+      },
+      "setting": {
+        "doorstep": 15,
+        "street": 4,
+        "park": 12
+      }
+    },
+    "wander": {
+      "time": {
+        "15": 10,
+        "30": 8
+      },
+      "energy": {
+        "low": 2,
+        "medium": 7,
+        "high": 9
+      },
+      "setting": {
+        "street": 12,
+        "park": 6
+      }
+    },
+    "explore": {
+      "time": {
+        "30": 4
+      },
+      "energy": {
+        "medium": 2,
+        "high": 2
+      },
+      "setting": {
+        "park": 4
+      }
+    }
+  }
+}
