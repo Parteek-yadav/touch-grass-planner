@@ -1,0 +1,1 @@
+import {recommend,score} from './site/planner.mjs';let text='';for await(const chunk of process.stdin)text+=chunk;const cases=JSON.parse(text);const results=cases.map(c=>{try{return {recommendation:recommend(c.features,c.unsafe,c.stationary),scores:c.unsafe?null:score(c.features)};}catch(e){return {error:e.message};}});process.stdout.write(JSON.stringify(results));
