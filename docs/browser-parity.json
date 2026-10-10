@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "valid_context_modifier_cases": 108,
+  "invalid_cases": 4,
+  "total_cases": 112,
+  "comparison": "All recommendation fields, safety bypass, stationary constraints, explanations, ranking and raw probabilities; numeric tolerance 1e-12. Actual Node execution, not a claimed equivalence.",
+  "node_version": "v24.15.0"
+}
