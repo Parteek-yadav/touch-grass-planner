@@ -1,0 +1,284 @@
+{
+  "scope": "Synthetic author-label agreement ONLY; not real-world accuracy, effectiveness, or safety. No hyperparameter tuning on this holdout.",
+  "split": "Seed 20261010; hold out 9 complete input contexts, train on other 18; no identical context in both sets. Same author-designed distribution remains a limitation.",
+  "training_rows": 54,
+  "held_out_rows": 27,
+  "held_out_contexts": 9,
+  "model_correct": 16,
+  "majority_baseline_correct": 12,
+  "model_label_agreement": 0.5926,
+  "baseline_label_agreement": 0.4444,
+  "production_model": "Separately trained on all 81 rows; this evaluation model is not saved over it. Scores evaluated before UI eligibility filters; baseline gets no filter either.",
+  "outcomes": [
+    {
+      "features": {
+        "time": "5",
+        "energy": "low",
+        "setting": "street"
+      },
+      "synthetic_label": "pause",
+      "model": "pause",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "5",
+        "energy": "low",
+        "setting": "street"
+      },
+      "synthetic_label": "pause",
+      "model": "pause",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "5",
+        "energy": "low",
+        "setting": "street"
+      },
+      "synthetic_label": "observe",
+      "model": "pause",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "5",
+        "energy": "high",
+        "setting": "doorstep"
+      },
+      "synthetic_label": "observe",
+      "model": "observe",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "5",
+        "energy": "high",
+        "setting": "doorstep"
+      },
+      "synthetic_label": "observe",
+      "model": "observe",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "5",
+        "energy": "high",
+        "setting": "doorstep"
+      },
+      "synthetic_label": "pause",
+      "model": "observe",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "5",
+        "energy": "high",
+        "setting": "park"
+      },
+      "synthetic_label": "observe",
+      "model": "observe",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "5",
+        "energy": "high",
+        "setting": "park"
+      },
+      "synthetic_label": "observe",
+      "model": "observe",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "5",
+        "energy": "high",
+        "setting": "park"
+      },
+      "synthetic_label": "pause",
+      "model": "observe",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "15",
+        "energy": "low",
+        "setting": "doorstep"
+      },
+      "synthetic_label": "pause",
+      "model": "pause",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "15",
+        "energy": "low",
+        "setting": "doorstep"
+      },
+      "synthetic_label": "pause",
+      "model": "pause",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "15",
+        "energy": "low",
+        "setting": "doorstep"
+      },
+      "synthetic_label": "observe",
+      "model": "pause",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "15",
+        "energy": "low",
+        "setting": "park"
+      },
+      "synthetic_label": "observe",
+      "model": "observe",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "15",
+        "energy": "low",
+        "setting": "park"
+      },
+      "synthetic_label": "pause",
+      "model": "observe",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "15",
+        "energy": "low",
+        "setting": "park"
+      },
+      "synthetic_label": "observe",
+      "model": "observe",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "15",
+        "energy": "high",
+        "setting": "street"
+      },
+      "synthetic_label": "wander",
+      "model": "wander",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "15",
+        "energy": "high",
+        "setting": "street"
+      },
+      "synthetic_label": "wander",
+      "model": "wander",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "15",
+        "energy": "high",
+        "setting": "street"
+      },
+      "synthetic_label": "wander",
+      "model": "wander",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "30",
+        "energy": "low",
+        "setting": "street"
+      },
+      "synthetic_label": "pause",
+      "model": "pause",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "30",
+        "energy": "low",
+        "setting": "street"
+      },
+      "synthetic_label": "wander",
+      "model": "pause",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "30",
+        "energy": "low",
+        "setting": "street"
+      },
+      "synthetic_label": "pause",
+      "model": "pause",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "30",
+        "energy": "low",
+        "setting": "park"
+      },
+      "synthetic_label": "observe",
+      "model": "explore",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "30",
+        "energy": "low",
+        "setting": "park"
+      },
+      "synthetic_label": "observe",
+      "model": "explore",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "30",
+        "energy": "low",
+        "setting": "park"
+      },
+      "synthetic_label": "pause",
+      "model": "explore",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "30",
+        "energy": "medium",
+        "setting": "doorstep"
+      },
+      "synthetic_label": "observe",
+      "model": "pause",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "30",
+        "energy": "medium",
+        "setting": "doorstep"
+      },
+      "synthetic_label": "pause",
+      "model": "pause",
+      "majority_baseline": "observe"
+    },
+    {
+      "features": {
+        "time": "30",
+        "energy": "medium",
+        "setting": "doorstep"
+      },
+      "synthetic_label": "observe",
+      "model": "pause",
+      "majority_baseline": "observe"
+    }
+  ]
+}
