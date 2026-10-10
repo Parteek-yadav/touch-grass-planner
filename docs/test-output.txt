@@ -1,5 +1,6 @@
 Python: 3.12.7 (main, Oct 16 2024, 00:21:24) [MSC v.1929 64 bit (AMD64)]
 Trained local synthetic model on 81 rows; labels: explore, observe, pause, wander
+test_python_javascript_full_matrix (test_browser_parity.BrowserParityTests.test_python_javascript_full_matrix) ... ok
 test_close_call_disclosed (test_planner.ExplanationTests.test_close_call_disclosed) ... ok
 test_context_holdout (test_planner.ExplanationTests.test_context_holdout) ... ok
 test_evidence_matches_saved_counts (test_planner.ExplanationTests.test_evidence_matches_saved_counts) ... ok
@@ -17,7 +18,7 @@ test_uncertainty_disclosed (test_planner.PlannerTests.test_uncertainty_disclosed
 test_unsafe_override (test_planner.PlannerTests.test_unsafe_override) ... ok
 
 ----------------------------------------------------------------------
-Ran 15 tests in 0.010s
+Ran 16 tests in 0.116s
 
 OK
 
