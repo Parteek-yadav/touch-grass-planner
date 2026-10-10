@@ -3,6 +3,7 @@ import html,json,subprocess,sys,threading,urllib.request,urllib.error
 from http.server import HTTPServer
 from planner import ROOT
 from app import Handler
+(ROOT / 'docs').mkdir(exist_ok=True)
 
 def run(*args):
     p=subprocess.run([sys.executable,*args],cwd=ROOT,capture_output=True,text=True)
