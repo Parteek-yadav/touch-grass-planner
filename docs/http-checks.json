@@ -1,0 +1,27 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "path": "/api/plan?time=15&energy=medium&setting=street",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "path": "/api/plan?time=30&energy=high&setting=park&unsafe=true",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "path": "/api/plan?time=99&energy=low&setting=park",
+    "status": 400,
+    "passed": true
+  },
+  {
+    "path": "/missing",
+    "status": 404,
+    "passed": true
+  }
+]
