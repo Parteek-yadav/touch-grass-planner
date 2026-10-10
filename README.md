@@ -56,7 +56,7 @@ Run `python evaluate.py` to reproduce the context-disjoint synthetic baseline di
 
 The single-result browser UI hides inputs once a plan is shown and encourages closing the tab. Optional explanation shows synthetic feature counts, an uncalibrated score and ranking margin. Printable offline prompts: docs/OFFLINE-CARDS.md.
 
-.github/workflows/verify.yml prepares free public-repository GitHub Actions training, tests, synthetic evaluation, reproducibility check and evidence upload. A real GitHub run succeeded: https://github.com/Parteek-yadav/touch-grass-planner/actions/runs/38038041451 . Training, 15 unit tests, five CLI scenarios, five loopback HTTP checks, synthetic evaluation, exact model reproducibility and evidence artifact upload passed on Ubuntu. The browser adaptation is deployed separately to the live demo link above.
+.github/workflows/verify.yml prepares free public-repository GitHub Actions training, tests, synthetic evaluation, reproducibility check and evidence upload. Browser-aware verification succeeded: https://github.com/Parteek-yadav/touch-grass-planner/actions/runs/38038778132 . Training, 16 unit tests (including 112 actual Node/Python parity cases), five CLI scenarios, five loopback HTTP checks, synthetic evaluation, exact model reproducibility and evidence artifact upload passed on Ubuntu. Deployment succeeded after the same tests and exact bundle reproducibility gate: https://github.com/Parteek-yadav/touch-grass-planner/actions/runs/38038778111 . The browser adaptation is deployed separately to the live demo link above.
 
 ## Browser equivalence and testing
 
@@ -65,3 +65,5 @@ Python remains stdlib-only. To run the full verification suite (which now includ
 The web app provides the same hard safety/stationary/time/park constraints, explicit model limitations and one-plan exit. The root index.html remains the optional Python-server UI; site/index.html is the functional static app. No service worker or claim of offline first-load support.
 
 The Pages workflow runs the complete suite and checks exact model/bundle reproducibility before uploading only site/. Repository contents permission defaults to read; only the deployment job has pages:write and id-token:write. No credentials are embedded in site assets.
+
+Live browser smoke checks verified ordinary, stationary-only and unsafe override scenarios on October 10, 2026. The observed browser resource list did not add inference requests after planner.mjs and model-data.mjs loaded. No outdoor field testing or fresh-load offline availability is claimed.
